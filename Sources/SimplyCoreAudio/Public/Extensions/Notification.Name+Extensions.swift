@@ -24,6 +24,12 @@ public extension Notification.Name {
     ///
     /// Returned `userInfo` object will contain the keys `addedDevices` and `removedDevices`.
     static let deviceListChanged = Self("deviceListChanged")
+    
+    /// Called whenever any of the devices currently available to the system changes.
+    static let allDevicesChanged = Self("allDevicesChanged")
+
+    /// Called whenever Audio Service restarts.
+    static let serviceRestarted = Self("serviceRestarted")
 
     // MARK: - Audio Device Notifications
 

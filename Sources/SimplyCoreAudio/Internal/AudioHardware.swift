@@ -193,6 +193,10 @@ private func propertyListener(objectID: UInt32,
         notificationCenter.post(name: .defaultOutputDeviceChanged, object: _self)
     case kAudioHardwarePropertyDefaultSystemOutputDevice:
         notificationCenter.post(name: .defaultSystemOutputDeviceChanged, object: _self)
+    case kAudioHardwarePropertyDevices:
+        notificationCenter.post(name: .allDevicesChanged, object: _self)
+    case kAudioHardwarePropertyServiceRestarted:
+        notificationCenter.post(name: .serviceRestarted, object: _self)
     default:
         break
     }
